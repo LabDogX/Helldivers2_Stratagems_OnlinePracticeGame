@@ -1,29 +1,51 @@
 # Helldivers2 Stratagems Online Practice Game
 
-一个单文件网页练习小游戏，用来练习类似《Helldivers 2》战备指令输入的反应速度和准确率。
+一个受《Helldivers 2》启发的网页战备指令练习器。项目以轻量级静态网页形式实现，用于练习方向指令输入，包含中英文战备名称、真实方向代码、分类筛选和来自 wiki 的战备图标。
 
-当前版本包含中英文战备指令名、真实方向代码、分类筛选和战备图标显示。
+## 在线试玩
 
-## 在线运行
+GitHub Pages 地址：
 
-仓库发布到 GitHub Pages 后，入口文件是：
+[https://labdogx.github.io/Helldivers2_Stratagems_OnlinePracticeGame/](https://labdogx.github.io/Helldivers2_Stratagems_OnlinePracticeGame/)
+
+## 功能
+
+- 中英文战备指令名称显示。
+- 每个战备指令匹配对应方向输入代码。
+- 支持按战备类别筛选题库。
+- 三档难度，根据指令长度和得分倍率区分。
+- 支持 60 秒冲刺和无限练习两种模式。
+- 支持键盘方向键和页面方向按钮输入。
+- 最近记录展示完成时间和得分增量。
+- 单页静态实现，无需构建流程。
+
+## 本地运行
+
+克隆仓库后，直接使用浏览器打开 `index.html`。项目不依赖包管理器、后端服务或构建工具。
 
 ```text
 index.html
 ```
 
-也可以直接在本地双击 `index.html` 打开游玩。
+## 仓库结构
 
-## 项目文件
+- `index.html`：完整游戏页面，包含页面结构、样式、数据和交互逻辑。
+- `README.md`：英文项目文档。
+- `README.zh-CN.md`：中文项目文档。
+- `音乐播放器图标/`：保留给本地音乐播放器模块使用的 UI 图标资源。
+- `Original Soundtrack/`：可选的本地原声音乐目录，已被 Git 忽略。
 
-- `index.html`：完整游戏页面，包含样式和交互逻辑。
-- `Original Soundtrack/Helldivers II Original Soundtrack (2024)`：本地音乐播放器使用的 MP3 文件目录。该目录不会提交到 GitHub；请只在本地或拥有发布授权时提供音频文件。
+## 资产策略
+
+公开仓库不托管《Helldivers 2》原声音乐文件。本地音乐播放器模块仍保留在源码中，便于本地实验和后续开发，但公开页面默认隐藏播放器界面，原声音乐目录也不会进入版本控制。
+
+战备图标和默认训练图标在运行时从 Helldivers Wiki 的公开图片链接加载，未作为本地资源打包进仓库。
 
 ## 难度说明
 
-- 轻松：只抽取方向长度不超过 4 的战备指令，得分倍率为 1x。
-- 标准：只抽取方向长度不超过 5 的战备指令，得分倍率为 1.35x。
-- 地狱：不限制方向长度，所有战备指令都可能出现，得分倍率为 1.8x。
+- 轻松：抽取方向长度不超过 4 的战备指令，得分倍率为 1x。
+- 标准：抽取方向长度不超过 5 的战备指令，得分倍率为 1.35x。
+- 地狱：使用完整战备题库，不限制方向长度，得分倍率为 1.8x。
 
 难度不会改变倒计时速度；它主要影响题库长度范围和完成后的得分倍率。
 
@@ -37,6 +59,4 @@ index.html
 
 ## 说明
 
-这是一个非官方粉丝练习项目，仅用于学习、练习和个人娱乐。项目不隶属于 Arrowhead Game Studios、Sony Interactive Entertainment 或 PlayStation，也未获得其认可、赞助或授权。
-
-项目不会提交或托管《Helldivers 2》原声音乐文件。本地音乐播放器相关代码保留在源码中，但公开网页默认隐藏播放器界面。
+这是一个非官方粉丝练习项目。项目不隶属于 Arrowhead Game Studios、Sony Interactive Entertainment 或 PlayStation，也未获得其认可、赞助或授权。*Helldivers* 及相关名称、标志、图片和游戏资产归各自权利人所有。

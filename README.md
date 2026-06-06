@@ -2,30 +2,52 @@
 
 [中文说明](README.zh-CN.md)
 
-A single-file web practice game for training reaction speed and accuracy with stratagem-style directional inputs inspired by *Helldivers 2*.
+A browser-based stratagem input trainer inspired by *Helldivers 2*. The project is designed as a lightweight, static web app for practicing directional command sequences with bilingual stratagem names, real input codes, category filters, and wiki-hosted stratagem icons.
 
-The current version includes bilingual Chinese and English stratagem names, real directional input codes, category filtering, and stratagem icon display.
+## Live Demo
 
-## Online Play
+Play online through GitHub Pages:
 
-After the repository is published through GitHub Pages, the entry file is:
+[https://labdogx.github.io/Helldivers2_Stratagems_OnlinePracticeGame/](https://labdogx.github.io/Helldivers2_Stratagems_OnlinePracticeGame/)
+
+## Features
+
+- Bilingual stratagem display with Chinese and English names.
+- Directional input sequences matched to each stratagem.
+- Category filtering for focused practice sessions.
+- Three difficulty levels based on sequence length and score multiplier.
+- Timed sprint and endless practice modes.
+- Keyboard and on-screen directional input support.
+- Recent-result history with completion time and score gain.
+- Static single-page implementation with no build step required.
+
+## Running Locally
+
+Clone the repository and open `index.html` in a browser. No package manager, backend service, or build pipeline is required.
 
 ```text
 index.html
 ```
 
-You can also open `index.html` locally in a browser.
+## Repository Structure
 
-## Project Files
+- `index.html`: complete game page, including markup, styles, data, and interaction logic.
+- `README.md`: English project documentation.
+- `README.zh-CN.md`: Chinese project documentation.
+- `音乐播放器图标/`: UI icon assets retained for the dormant local music-player module.
+- `Original Soundtrack/`: optional local-only soundtrack directory ignored by Git.
 
-- `index.html`: the complete game page, including styles and interaction logic.
-- `Original Soundtrack/Helldivers II Original Soundtrack (2024)`: the local MP3 directory used by the hidden local music player code. This directory is not committed to GitHub; only provide audio files locally or when you have permission to publish them.
+## Asset Policy
+
+The public repository does not host *Helldivers 2* soundtrack files. The optional local music-player module remains in the source code for local experimentation, but its interface is hidden in the public page and the soundtrack directory is excluded from version control.
+
+Stratagem icons and the default training icon are loaded from public Helldivers Wiki image URLs at runtime. They are not bundled as local assets in this repository.
 
 ## Difficulty Levels
 
-- Easy: only draws stratagems with input sequences of 4 directions or fewer. Score multiplier: 1x.
-- Standard: only draws stratagems with input sequences of 5 directions or fewer. Score multiplier: 1.35x.
-- Helldive: no input-length limit. Every stratagem can appear. Score multiplier: 1.8x.
+- Easy: draws stratagems with input sequences of 4 directions or fewer. Score multiplier: 1x.
+- Standard: draws stratagems with input sequences of 5 directions or fewer. Score multiplier: 1.35x.
+- Helldive: includes the full stratagem pool with no sequence-length limit. Score multiplier: 1.8x.
 
 Difficulty does not change the countdown speed. It mainly changes the eligible stratagem pool and the score multiplier after each completion.
 
@@ -39,6 +61,4 @@ The icons are loaded through public wiki image links, so the browser needs inter
 
 ## Disclaimer
 
-This is an unofficial fan-made practice project for learning, practice, and personal entertainment. It is not affiliated with, endorsed by, sponsored by, or authorized by Arrowhead Game Studios, Sony Interactive Entertainment, or PlayStation.
-
-This repository does not commit or host *Helldivers 2* original soundtrack files. Local music-player code is preserved in the source, but the player interface is hidden by default on the public page.
+This is an unofficial fan-made practice project. It is not affiliated with, endorsed by, sponsored by, or authorized by Arrowhead Game Studios, Sony Interactive Entertainment, or PlayStation. *Helldivers* and related names, marks, images, and game assets belong to their respective owners.
