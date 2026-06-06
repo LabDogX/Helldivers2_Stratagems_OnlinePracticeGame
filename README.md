@@ -35,15 +35,6 @@ index.html
 
 图标通过公开 wiki 图片链接显示，因此浏览器需要联网才能加载图标。
 
-## 发布到 GitHub Pages
-
-1. 创建名为 `Helldivers2_Stratagems_OnlinePracticeGame` 的 GitHub 仓库。
-2. 把本目录内的文件提交并推送到仓库。
-3. 在 GitHub 仓库页面进入 `Settings` -> `Pages`。
-4. Source 选择 `Deploy from a branch`。
-5. Branch 选择 `main`，目录选择 `/root`。
-6. 保存后等待 GitHub 生成 Pages 地址。
-
 ## 说明
 
 这是一个非官方粉丝练习项目，仅用于学习、练习和个人娱乐。项目不包含官方游戏资源。
