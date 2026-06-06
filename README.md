@@ -1,40 +1,44 @@
 # Helldivers2 Stratagems Online Practice Game
 
-一个单文件网页练习小游戏，用来练习类似《Helldivers 2》战备指令输入的反应速度和准确率。
+[中文说明](README.zh-CN.md)
 
-当前版本包含中英文战备指令名、真实方向代码、分类筛选和战备图标显示。
-页面右下角包含本地浮动音乐播放器，可播放 `Original Soundtrack/Helldivers II Original Soundtrack (2024)` 目录中的 MP3，并支持曲目切换、进度拖动、音量调节、列表循环、单曲循环和随机播放。
+A single-file web practice game for training reaction speed and accuracy with stratagem-style directional inputs inspired by *Helldivers 2*.
 
-## 在线运行
+The current version includes bilingual Chinese and English stratagem names, real directional input codes, category filtering, and stratagem icon display.
 
-仓库发布到 GitHub Pages 后，入口文件是：
+## Online Play
+
+After the repository is published through GitHub Pages, the entry file is:
 
 ```text
 index.html
 ```
 
-也可以直接在本地双击 `index.html` 打开游玩。
+You can also open `index.html` locally in a browser.
 
-## 项目文件
+## Project Files
 
-- `index.html`：完整游戏页面，包含样式和交互逻辑。
-- `Original Soundtrack/Helldivers II Original Soundtrack (2024)`：本地音乐播放器使用的 MP3 文件目录。该目录不会提交到 GitHub；请只在本地或拥有发布授权时提供音频文件。
+- `index.html`: the complete game page, including styles and interaction logic.
+- `Original Soundtrack/Helldivers II Original Soundtrack (2024)`: the local MP3 directory used by the hidden local music player code. This directory is not committed to GitHub; only provide audio files locally or when you have permission to publish them.
 
-## 难度说明
+## Difficulty Levels
 
-- 轻松：只抽取方向长度不超过 4 的战备指令，得分倍率为 1x。
-- 标准：只抽取方向长度不超过 5 的战备指令，得分倍率为 1.35x。
-- 地狱：不限制方向长度，所有战备指令都可能出现，得分倍率为 1.8x。
+- Easy: only draws stratagems with input sequences of 4 directions or fewer. Score multiplier: 1x.
+- Standard: only draws stratagems with input sequences of 5 directions or fewer. Score multiplier: 1.35x.
+- Helldive: no input-length limit. Every stratagem can appear. Score multiplier: 1.8x.
 
-难度不会改变倒计时速度；它主要影响题库长度范围和完成后的得分倍率。
+Difficulty does not change the countdown speed. It mainly changes the eligible stratagem pool and the score multiplier after each completion.
 
-## 数据来源
+## Data Sources
 
-- 英文名称、方向代码和图标：Helldivers Wiki 的 Stratagems 页面
-- 中文名称：参考 Bilibili 译制图，并补齐后续新增条目
+- English names, directional codes, and stratagem icons: [Helldivers Wiki - Stratagems](https://helldivers.wiki.gg/wiki/Stratagems)
+- Default training icon: [Helldivers Wiki - Images - Helldivers 2 - Logo](https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Logo)
+- Chinese names: based on a [Bilibili translated reference image](https://www.bilibili.com/opus/919091931569455128), with additional entries completed manually
 
-图标通过公开 wiki 图片链接显示，因此浏览器需要联网才能加载图标。
+The icons are loaded through public wiki image links, so the browser needs internet access to display them. When reusing wiki-hosted files outside the wiki, please attribute the retrieval to the uploader and to the Helldivers Wiki.gg.
 
-## 说明
+## Disclaimer
 
-这是一个非官方粉丝练习项目，仅用于学习、练习和个人娱乐。项目不包含官方游戏资源。
+This is an unofficial fan-made practice project for learning, practice, and personal entertainment. It is not affiliated with, endorsed by, sponsored by, or authorized by Arrowhead Game Studios, Sony Interactive Entertainment, or PlayStation.
+
+This repository does not commit or host *Helldivers 2* original soundtrack files. Local music-player code is preserved in the source, but the player interface is hidden by default on the public page.
